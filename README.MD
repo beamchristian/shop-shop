@@ -1,1 +1,27 @@
 # SHOP-SHOP
+
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- cdn for stripe library -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script>
+      // use client-side test api key
+      var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+
+      // immediately redirect to stripe using your checkout session
+      stripe.redirectToCheckout({
+        sessionId:
+          'cs_test_b16k9Kan6XudM2JvOwu9ojltR1uRiz3auSfTCF7wpCBBkRc8eNWOmCviv2',
+      });
+    </script>
+  </body>
+</html>
+```
